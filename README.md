@@ -15,11 +15,9 @@ In your command-line run the following commands:
 this will install also the necessary PHP dependency
 
 # Installing Postgres
-
 You can choose to install Postgres via brew or via the official app.
 
 ## via the app
-
 1. Download the [Postgres.app](https://postgresapp.com/)
 2. Copy it to the Application folder
 3. Open it
@@ -32,7 +30,6 @@ You can choose to install Postgres via brew or via the official app.
     ```
 
 ## via Brew
-
 In your command-line run the following commands:
 
 1. `brew doctor`
@@ -150,7 +147,6 @@ If you want to use the preinstalled PHP 7.1, simply uncomment the module
 
 `LoadModule php7_module libexec/apache2/libphp7.so`
 
-
 ### If you want to run Perl scripts, you will have to do something similar:
 
 Enable Perl by uncommenting line 178, changing:
@@ -224,7 +220,6 @@ to
 `Include /private/etc/apache2/extra/httpd-userdir.conf`
 
 Now save and quit.
-
 
 ### modifying the configuration
 
@@ -334,4 +329,4 @@ And test it by entering the following into the address bar:
 
 http://localhost/info.php
 
-You should see your PHP configuration information.
+You will see your PHP configuration information.
