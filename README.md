@@ -14,7 +14,24 @@ In your command-line run the following commands:
 
 this will install also the necessary PHP dependency
 
-# Installing Postgres via Brew
+# Installing Postgres
+
+You can choose to install Postgres via brew or via the official app.
+
+## via the app
+
+1. Download the [Postgres.app](https://postgresapp.com/)
+2. Copy it to the Application folder
+3. Open it
+4. Click "Initialize" to create a new server
+5. Configure your `$PATH` to use the included command line tools (optional):
+
+    ```
+    sudo mkdir -p /etc/paths.d &&
+    echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+    ```
+
+## via Brew
 
 In your command-line run the following commands:
 
