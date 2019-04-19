@@ -147,6 +147,10 @@ If you want to use the preinstalled PHP 7.1, simply uncomment the module
 
 `LoadModule php7_module libexec/apache2/libphp7.so`
 
+NOTE:
+
+if you use the brew version and you upgrade (removing the old version) you need to change the path or Apache will not start.
+
 ### If you want to run Perl scripts, you will have to do something similar:
 
 Enable Perl by uncommenting line 178, changing:
