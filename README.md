@@ -157,22 +157,6 @@ to
 
 `LoadModule perl_module libexec/apache2/mod_perl.so`
 
-### Enable personal websites by uncommenting the following at line 174:
-
-`#LoadModule userdir_module libexec/apache2/mod_userdir.so`
-
-to
-
-`LoadModule userdir_module libexec/apache2/mod_userdir.so`
-
-and do the same at line 511:
-
-`#Include /private/etc/apache2/extra/httpd-userdir.conf`
-
-to
-
-`Include /private/etc/apache2/extra/httpd-userdir.conf`
-
 ### Enable virtual host configuration
 
 line 168:
@@ -222,20 +206,6 @@ to
 Now save and quit.
 
 ### modifying the configuration
-
-Open the userdir conf file you just enabled above with:
-
-`sudo vi /etc/apache2/extra/httpd-userdir.conf`
-
-and uncomment the following at line 16:
-
-`#Include /private/etc/apache2/users/*.conf`
-
-to
-
-`Include /private/etc/apache2/users/*.conf`
-
-Save and exit.
 
 Open the vhosts conf file you just enabled above with:
 
