@@ -197,16 +197,6 @@ to
 
 `include /private/etc/apache2/extra/httpd-vhosts.conf`
 
-### include User home directories conf
-
-line 514
-
-`#Include /private/etc/apache2/extra/httpd-userdir.conf`
-
-to
-
-`Include /private/etc/apache2/extra/httpd-userdir.conf`
-
 Now save and quit.
 
 ### modifying the configuration
@@ -238,33 +228,6 @@ Lion and later versions no longer create personal web sites by default. If you a
 
 `echo "<html><body><h1>My site works</h1></body></html>" > ~/Sites/index.html`
 
-### Check your .conf file
-
-While you are in `/etc/apache2`, double-check to make sure you have a user config file. It should exist at the path: `/etc/apache2/users/<your short user name>.conf`.
-
-That file may not exist and if you upgrade from an older version, you may still not have it. It does appear to be created when you create a new user. If that file doesn't exist, you will need to create it with:
-
-`sudo vi /etc/apache2/users/<your short user name>.conf`
-
-Use the following as the content:
-
-```
-<Directory "/Users/<your short user name>/Sites/">
-
-  AddLanguage en .en
-
-  AddHandler perl-script .pl
-
-  PerlHandler ModPerl::Registry
-
-  Options Indexes MultiViews FollowSymLinks ExecCGI
-
-  AllowOverride None
-
-  Require host localhost
-
-</Directory>
-```
 ### Restart apache
 
 Now you are ready to restart Apache itself. But first, do a sanity check. Sometimes copying and pasting from an internet forum can insert invisible, invalid characters into config files. Check your configuration by running the following command in the Terminal:
@@ -273,7 +236,7 @@ Now you are ready to restart Apache itself. But first, do a sanity check. Someti
 
 The final step is to restart Apache:
 
-`apachectl restart`
+`sudo apachectl restart`
 
 ### Mapping the dummy domain
 
